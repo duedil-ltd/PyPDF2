@@ -33,6 +33,8 @@ Utility functions for PDF library.
 __author__ = "Mathieu Fenniak"
 __author_email__ = "biziqe@mathieu.fenniak.net"
 
+from Crypto.Cipher import ARC4
+
 #ENABLE_PSYCO = False
 #if ENABLE_PSYCO:
 #    try:
@@ -102,7 +104,11 @@ class ConvertFunctionsToVirtualList(object):
             raise IndexError, "sequence index out of range"
         return self.getFunction(index)
 
-def RC4_encrypt(key, plaintext):
+def RC4_encrypt(key, plaintext)
+    cipher = ARC4.new(key)
+    return cipher.encrypt(plaintext)
+
+def _RC4_encrypt(key, plaintext):
     S = [i for i in range(256)]
     j = 0
     for i in range(256):
