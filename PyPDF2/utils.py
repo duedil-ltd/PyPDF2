@@ -104,7 +104,7 @@ class ConvertFunctionsToVirtualList(object):
             raise IndexError, "sequence index out of range"
         return self.getFunction(index)
 
-def RC4_encrypt(key, plaintext)
+def RC4_encrypt(key, plaintext):
     cipher = ARC4.new(key)
     return cipher.encrypt(plaintext)
 
