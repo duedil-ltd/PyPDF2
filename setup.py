@@ -54,5 +54,8 @@ setup(
             ],
         packages=["PyPDF2"],
         cmdclass = {'build_py': build_py},
+        install_requires=[
+            "pycrypto==2.6",
+        ],
     )
 
